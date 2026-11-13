@@ -1,0 +1,80 @@
+export const SITE_CONFIG = {
+  business: {
+    name: 'Nils Beauty Studio',
+    tagline: 'Güzelliğiniz Emin Ellerde',
+    city: 'Mersin',
+    country: 'Türkiye',
+    address: 'Mezitli, Mersin / Türkiye',
+    mapsEmbedUrl: null as string | null,
+    mapsSearchQuery: 'Nils Beauty Studio Mersin',
+  },
+  contact: {
+    phone: '+90 530 123 45 67',
+    whatsapp: '905301234567',
+    email: 'info@nilsbeauty.com',
+    instagram: 'nilsbeautystudio',
+  },
+  hours: {
+    weekdays: '09:00 – 19:00',
+    saturday: '09:00 – 19:00',
+    sunday: 'Kapalı',
+  },
+  services: [
+    {
+      id: 'cilt-bakimi',
+      title: 'Cilt Bakımı',
+      shortDescription: 'Cildinize özel, derinlemesine bakım ve yenileme.',
+      description: 'Cilt tipinize özel hazırlanan profesyonel bakım protokolleri ile cildinizi derinlemesine temizliyor, nemlendiriyor ve yeniliyoruz.',
+      image: '/images/service-facial.webp',
+      slug: 'cilt-bakimi',
+      icon: 'sparkles',
+      provisional: true,
+    },
+    {
+      id: 'kirpik-kas',
+      title: 'Kirpik & Kaş',
+      shortDescription: 'Daha dolgun, daha belirgin ve doğal bir görünüm.',
+      description: 'Doğal güzelliğinizi ön plana çıkaran kirpik ve kaş uygulamaları. Yüz hatlarınıza uygun şekillendirme ve tasarım hizmetleri.',
+      image: '/images/service-lashes.webp',
+      slug: 'kirpik-kas',
+      icon: 'eye',
+      provisional: true,
+    },
+    {
+      id: 'kalici-makyaj',
+      title: 'Kalıcı Makyaj',
+      shortDescription: 'Doğal, uzun süre kalıcı ve bakımlı bir görünüm.',
+      description: 'Microblading, ombre kaş ve kalıcı eyeliner gibi tekniklerle doğal ve uzun süre kalıcı sonuçlar elde edin.',
+      image: '/images/service-makeup.webp',
+      slug: 'kalici-makyaj',
+      icon: 'pen-line',
+      provisional: true,
+    },
+    {
+      id: 'guzellik-ritueli',
+      title: 'Güzellik Ritüeli',
+      shortDescription: 'Kendinize ayırdığınız zamana değer katın.',
+      description: 'Premium ürünler ve özenle tasarlanmış protokollerle hazırlanan güzellik ritüeli paketlerimizle kendinize özel bir deneyim yaşayın.',
+      image: '/images/service-ritual.webp',
+      slug: 'guzellik-ritueli',
+      icon: 'flower-2',
+      provisional: true,
+    },
+  ],
+  gallery: [
+    { id: 'g1', image: '/images/gallery-1.webp', alt: 'Profesyonel cilt bakımı uygulaması', category: 'cilt' },
+    { id: 'g2', image: '/images/gallery-2.webp', alt: 'Doğal kirpik ve kaş tasarımı', category: 'kirpik-kas' },
+    { id: 'g3', image: '/images/gallery-3.webp', alt: 'Profesyonel güzellik araçları', category: 'genel' },
+    { id: 'g4', image: '/images/gallery-4.webp', alt: 'Lüks cilt bakımı ürünleri', category: 'genel' },
+    { id: 'g5', image: '/images/gallery-5.webp', alt: 'Stüdyo iç mekan detayı', category: 'stüdyo' },
+    { id: 'g6', image: '/images/gallery-6.webp', alt: 'Profesyonel makyaj sanatı', category: 'makyaj' },
+  ],
+  meta: {
+    defaultTitle: 'Nils Beauty Studio | Mersin Güzellik Merkezi',
+    description: 'Nils Beauty Studio — Mersin\'de cilt bakımı, kalıcı makyaj, kirpik ve kaş hizmetleri. Profesyonel ekip ve kişiye özel çözümler.',
+    ogImage: '/images/hero-beauty.webp',
+  },
+} as const;
+
+export type Service = typeof SITE_CONFIG.services[number];
+export type GalleryItem = typeof SITE_CONFIG.gallery[number];
